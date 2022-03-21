@@ -6,12 +6,14 @@ source: https://sketchfab.com/3d-models/standard-mug-1ddf0e1fc752455b8bc78d09804
 title: Standard Mug
 */
 
-import React, { useRef } from 'react'
-import {useGLTF, useTexture} from '@react-three/drei'
+import React, {useRef} from 'react'
+import {useGLTF} from '@react-three/drei'
+import {TextureLoader} from "three";
+import {useLoader} from "@react-three/fiber";
 
 export default function Mug({ image, ...props }: any) {
 
-  const texture = useTexture(image || 'blue.png')
+  const texture = useLoader(TextureLoader, 'blue.png')
 
   const group = useRef()
   const { nodes, materials }: any = useGLTF('/model1.glb')
