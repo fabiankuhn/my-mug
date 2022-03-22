@@ -7,13 +7,16 @@ title: Standard Mug
 */
 
 import React, {useRef} from 'react'
-import {useGLTF} from '@react-three/drei'
-import {TextureLoader} from "three";
-import {useLoader} from "@react-three/fiber";
+import {useGLTF, useTexture} from '@react-three/drei'
+import {GroupProps} from "@react-three/fiber";
 
-export default function Mug({ image, ...props }: any) {
+type Props = GroupProps & {
+  image: string
+}
 
-  const texture = useLoader(TextureLoader, 'blue.png')
+export default function Mug({image, ...props}: Props) {
+
+  const texture = useTexture(image)
 
   const group = useRef()
   const { nodes, materials }: any = useGLTF('/model1.glb')

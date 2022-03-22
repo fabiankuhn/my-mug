@@ -1,6 +1,5 @@
-import {Button as ChakraButton} from "@chakra-ui/react";
+import {Button as ChakraButton, ButtonProps} from "@chakra-ui/react";
 import {FC} from "react";
-import {ButtonProps} from "@chakra-ui/button/src/button";
 import Link from 'next/link'
 
 type Props = ButtonProps &  {

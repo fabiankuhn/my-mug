@@ -81,7 +81,7 @@ const Create = () => {
           <pointLight position={[10, 10, 10]}/>
           <OrbitControls/>
           <Suspense fallback={null}>
-            <Mug image={croppedUrl} position={[0, 0, 0]}/>
+            <Mug image={croppedUrl || 'blue.png'} position={[0, 0, 0]}/>
           </Suspense>
         </Canvas>
       </Box>

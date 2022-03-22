@@ -1,7 +1,7 @@
 import {FormEvent} from "react";
 import getStripe from "../utils/stripe.utils";
 import {fetchPostJSON} from "../utils/api.utils";
-import {Button} from "@chakra-ui/react";
+import { Button } from "./Buttons";
 
 type Session = { id: string };
 
