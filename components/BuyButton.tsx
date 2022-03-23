@@ -26,10 +26,8 @@ export const BuyButton = () => {
   return (
       <Button
         marginY={3}
-        className="checkout-style-background"
         type="submit"
         onClick={handleSubmit}
-        colorScheme={"blue"}
       >
         Buy
       </Button>

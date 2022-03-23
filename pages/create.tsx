@@ -67,13 +67,20 @@ const Create = () => {
       />
 
       <Button
-        onClick={onClick}
-      >Crop</Button>
-
-
-      <Button
+        marginY={1}
+        marginRight={1}
         onClick={() => fileInput.current.click()}
       >Choose File</Button>
+
+      <Button
+        marginY={1}
+        onClick={onClick}
+      >Preview</Button>
+
+      <Box as="span" m={1}>
+        <BuyButton/>
+      </Box>
+
 
       <Box height="50vh">
         <Canvas camera={{position: [2.186, 1.763, 15.216]}}>
@@ -86,7 +93,6 @@ const Create = () => {
         </Canvas>
       </Box>
 
-      <BuyButton/>
 
     </Page>
   )
